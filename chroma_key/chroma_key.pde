@@ -25,9 +25,6 @@ void setup(){
     for (int i = 0; i < cameras.length; i++) {
       println(cameras[i]);
     }
-    
-    // The camera can be initialized directly using an 
-    // element from the array returned by list():
     cam = new Capture(this, cameras[0]);
     cam.start();     
   }    
@@ -46,7 +43,6 @@ void draw(){
   chroma.set("u_tex",guy);
   resetShader();
   image(beach,0,0);
-  //image(myMovie,0,0);
   shader(chroma);
   
   float HUE,SAT,BRI,
